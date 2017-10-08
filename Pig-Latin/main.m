@@ -67,22 +67,17 @@ int main(int argc, const char * argv[]) {
         
         while (programRun == YES) {
             
-        NSLog(@"Input a sentence");
-        
-        char str[100];
-        fgets (str, 100, stdin);
-        NSString *inputString = [[NSString alloc] initWithUTF8String:str];
-        inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        inputString = [inputString stringByPigLatinization];
-        
-        NSLog(@"%@", inputString);
+            NSLog(@"Input a sentence");
+            
+            char str[100];
+            fgets (str, 100, stdin);
+            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
+            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            inputString = [inputString stringByPigLatinization];
+            
+            NSLog(@"%@", inputString);
         }
-        
-//        NSString *url = @"http://www.sitename.com";
-//        NSRange range = NSMakeRange(7, [url length] - 7);
-//        NSString *subString = [url substringWithRange:range];
-//        NSLog(@"substring = %@", subString);
         
     }
     return 0;
